@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  spark-master:
+    build: .
+    ports:
+      - "9090:8080"  # Spark Master UI
+      - "7077:7077"  # Spark Master Port
+      - "4040:4040"  # Spark Application UI
+    volumes:
+      - ./app:/app
+      - ./data:/data
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    container_name: spark-master
+    networks:
+      - spark-network
+
+  spark-worker:
+    build: .
+    depends_on:
+      - spark-master
+    volumes:
+      - ./app:/app
+      - ./data:/data
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_WEBUI_PORT=8080
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+    deploy:
+      replicas: 1
+    container_name: spark-worker
+    networks:
+      - spark-network
+
+  kafka:
+    build: .
+    container_name: kafka
+    ports:
+      - "9092:9092"
+      - "29093:29093"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: 'broker,controller'
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka:29093'
+      KAFKA_LISTENERS: 'PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:29093'
+      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://localhost:9092'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 'CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT'
+      KAFKA_INTER_BROKER_LISTENER_NAME: 'PLAINTEXT'
+      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
+      KAFKA_LOG_DIRS: '/var/lib/kafka/data'
+      CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
+    driver: bridge
+
+volumes:
+  kafka-data:

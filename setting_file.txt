@@ -1,0 +1,121 @@
+{
+  "editor.formatOnSave": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "explorer.confirmDragAndDrop": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "explorer.confirmDelete": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "diffEditor.codeLens": true,
+  "diffEditor.experimental.showMoves": true,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontWeight": "450",
+  "editor.fontLigatures": "\u0027calt\u0027, \u0027ss01\u0027, \u0027ss02\u0027, \u0027ss03\u0027, \u0027ss04\u0027, \u0027ss05\u0027, \u0027ss06\u0027, \u0027zero\u0027, \u0027onum\u0027",
+  "BracketHighlighter.enableExtension": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enableImages": true,
+  "git.autofetch": true,
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "git.ignoreRebaseWarning": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1E1E1E",
+    "terminal.foreground": "#A9B7C6",
+    "editor.lineHighlightBackground": "#2b2b2b",
+    "editor.lineHighlightBorder": "#272727"
+  },
+  "workbench.colorTheme": "Visual Studio Dark",
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "terminal.integrated.enableVisualBell": true,
+  "editor.guides.bracketPairs": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prettier.semi": false,
+  "workbench.preferredLightColorTheme": "Copilot Theme - Higher Contrast",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "python.createEnvironment.trigger": "off",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "files.autoSave": "afterDelay",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "redhat.telemetry.enabled": true,
+  "terminal.explorerKind": "both",
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "node"
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "java.gradle.buildServer.openBuildOutput": "openOnBuildStart",
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "terminal.integrated.fontFamily": "Fira Code",
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.preferredHighContrastColorTheme": "Visual Studio 2017 Dark - C++",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.sideBar.location": "right",
+  "workbench.editor.splitInGroupLayout": "vertical",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.focusAfterRun": "accessible-buffer",
+  "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
+  "editor.minimap.enabled": true,
+  "editor.rulers": [80, 100],
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+  "editor.wordWrap": "on",
+  "editor.renderWhitespace": "boundary",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.indentation": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorWidth": 2,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "breadcrumbs.enabled": true,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "debug.console.fontSize": 14,
+  "debug.toolBarLocation": "docked"
+}
